@@ -1,7 +1,5 @@
 SELECT * FROM profiles
 
-DROP TABLE profiles
-
 CREATE TABLE profiles(
     id VARCHAR(10) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
