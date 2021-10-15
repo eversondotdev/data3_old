@@ -5,7 +5,7 @@ const pool = require('../db')
 router.get('/:ticker', async(req, res, next) => {
     const { ticker } = req.params;
     try {
-        const comapany = await pool.query('SELECT * from revenue_by_segment WHERE ticker = $1 AND year = 2020', [
+        const comapany = await pool.query('SELECT * from annual_stock_price WHERE ticker = $1', [
             ticker
         ])
 

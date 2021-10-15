@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const pool = require('../database/db')
+const pool = require('../db')
 
 router.get('/:ticker', async(req, res, next) => {
     const { ticker } = req.params;

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const pool = require('../database/db')
+const pool = require('../db')
 
 //All profiles
 router.get('/', async(req, res, next) => {
