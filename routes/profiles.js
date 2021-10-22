@@ -13,11 +13,11 @@ router.get('/', async(req, res, next) => {
 })
 
 //A single profile by id
-router.get('/:id', async(req, res, next) => {
-    const { id } = req.params;
+router.get('/:ticker_id', async(req, res, next) => {
+    const { ticker_id } = req.params;
     try {
-        const comapany = await pool.query('SELECT * from profiles WHERE id = $1', [
-            id
+        const comapany = await pool.query('SELECT * from profiles WHERE ticker_id = $1', [
+            ticker_id
         ])
         res.json(comapany.rows[0])
     } catch (err) {

@@ -1,7 +1,9 @@
 SELECT * FROM profiles
 
+DROP table profiles CASCADE
+
 CREATE TABLE profiles(
-    id VARCHAR(10) PRIMARY KEY,
+    ticker_id VARCHAR(10) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
 	ipo SMALLINT NOT NULL,
 	exchange VARCHAR(50) NOT NULL,
@@ -15,7 +17,7 @@ CREATE TABLE profiles(
 	description TEXT NOT NULL
 );
 
-INSERT INTO profiles(id, name, ipo, exchange, founded, city, state, country, sector, ceo, employees, description)
+INSERT INTO profiles(ticker_id, name, ipo, exchange, founded, city, state, country, sector, ceo, employees, description)
 VALUES
 ('AAPL','Apple',1980,'NASDAQ',1976,'Cupertino','California','USA','Consumer Electronics','Tim Cook',147000,'Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. The Company’s products include iPhone, Mac, iPad, and Wearables, Home and Accessories. iPhone is the Company’s line of smartphones based on its iOS operating system. Mac is the Company’s line of personal computers based on its macOS operating system. iPad is the Company’s line of multi-purpose tablets based on its iPadOS operating system. Wearables, Home and Accessories includes AirPods, Apple TV, Apple Watch, Beats products, HomePod, iPod touch and other Apple-branded and third-party accessories. AirPods are the Company’s wireless headphones that interact with Siri. Apple Watch is the Company’s line of smart watches. Its services include Advertising, AppleCare, Cloud Services, Digital Content and Payment Services. Its customers are primarily in the consumer, small and mid-sized business, education, enterprise and government markets.'),
 ('ADBE','Adobe',1986,'NASDAQ',1983,'San Jose','Delaware','USA','Software & IT Services','Shantanu Narayen',22516,'Adobe Inc., formerly Adobe Systems Incorporated, is a software company. The Company offers products and services used by professionals, marketers, knowledge workers, application developers, enterprises and consumers for creating, managing, measuring, optimizing and engaging with compelling content and experiences. It operates through three segments: Digital Media, Digital Experience and Publishing. Its Digital Media segment provides tools and solutions that enable individuals, small and medium businesses and enterprises to create, publish, promote and monetize their digital content. Its Digital Experience segment provides solutions and services for how digital advertising and marketing are created, managed, executed, measured and optimized. Its Publishing segment addresses market opportunities ranging from the diverse authoring and publishing needs of technical and business publishing to its legacy type and original equipment manufacturer printing businesses.'),
