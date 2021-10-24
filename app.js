@@ -31,6 +31,9 @@ app.use('/revenue_by_segment', revenue_by_segmentRoutes)
 const annual_report = require('./routes/annual_report')
 app.use('/annual_report', annual_report)
 
+const stock_price = require('./routes/stock_price')
+app.use('/stock_price', stock_price)
+
 const annual_stock_price = require('./routes/annual_stock_price')
 app.use('/annual_stock_price', annual_stock_price)
 

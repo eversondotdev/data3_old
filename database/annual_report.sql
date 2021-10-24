@@ -1,8 +1,10 @@
 SELECT * FROM annual_report
-WHERE ticker='AAPL';
+WHERE ticker_id='AAPL';
+
+DROP TABLE annual_report;
 
 CREATE TABLE annual_report(
-	ticker VARCHAR(10) NOT NULL,
+	ticker_id VARCHAR(10) NOT NULL,
 	year SMALLINT NOT NULL,
 	revenue INT NOT NULL,
 	net_income INT NOT NULL,
@@ -11,10 +13,10 @@ CREATE TABLE annual_report(
 	roe FLOAT NOT NULL,
 	ebitda INT NOT NULL,
 	ebitda_margin FLOAT NOT NULL,
-	FOREIGN KEY (ticker) references profiles (id)
+	FOREIGN KEY (ticker_id) references profiles (ticker_id)
 );
 
-INSERT INTO annual_report(ticker, year, revenue, net_income, profit_margin, equity, roe, ebitda, ebitda_margin)
+INSERT INTO annual_report(ticker_id, year, revenue, net_income, profit_margin, equity, roe, ebitda, ebitda_margin)
 VALUES
 ('AAPL',2020,274515,57411,0.209136112780722,65339,0.878663585301275,81020,0.295138699160337),
 ('AAPL',2019,260174,55256,0.212380945059845,90488,0.610644505348776,78284,0.300890942215594),
