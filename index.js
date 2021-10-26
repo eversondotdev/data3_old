@@ -25,8 +25,14 @@ app.use('/profiles', profilesRoutes)
 const competitorsRoutes = require('./routes/competitors')
 app.use('/competitors', competitorsRoutes)
 
-const revenue_by_segmentRoutes = require('./routes/revenue_by_segment')
-app.use('/revenue_by_segment', revenue_by_segmentRoutes)
+const revenue_by_segment_2020Routes = require('./routes/revenue_by_segment_2020')
+app.use('/revenue_by_segment_2020', revenue_by_segment_2020Routes)
+
+const revenue_by_segment_2019Routes = require('./routes/revenue_by_segment_2019')
+app.use('/revenue_by_segment_2019', revenue_by_segment_2019Routes)
+
+const revenue_by_segment_2018Routes = require('./routes/revenue_by_segment_2018')
+app.use('/revenue_by_segment_2018', revenue_by_segment_2018Routes)
 
 const annual_report = require('./routes/annual_report')
 app.use('/annual_report', annual_report)

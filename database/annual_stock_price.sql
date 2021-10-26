@@ -1,15 +1,15 @@
 SELECT * FROM annual_stock_price
-WHERE ticker_id = 'FB' AND price > 0
-ORDER BY date ASC;
+WHERE ticker_id = 'COST' AND price > 0
+ORDER BY date;
 
 DROP TABLE annual_stock_price
 
 CREATE TABLE annual_stock_price(
-	date VARCHAR(10),
+	date SMALLINT,
 	price FLOAT,
     ticker_id VARCHAR(10) NOT NULL,
 	FOREIGN KEY (ticker_id) references profiles (ticker_id)
-)
+);
 
 INSERT INTO annual_stock_price(date, price, ticker_id)
 VALUES
