@@ -2,6 +2,14 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 //CORS SETTINGS
 app.use(
     cors({
@@ -15,7 +23,7 @@ app.use(express.json())
 
 //INDEX
 app.get('/', (req, res, next) => {
-    res.send('I think its working')
+    res.send('<h1>Index</h1><ul> <li>List1</li> </ul>')
 })
 
 //ROUTES
