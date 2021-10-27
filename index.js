@@ -14,7 +14,7 @@ app.use(express.json()) // allows to access the req.body
 
 //INDEX
 app.get('/', (req, res, next) => {
-    res.send('<h1>Index</h1><ul> <li>List1</li> </ul>')
+    res.send('<h1>API INDEX</h1><ul> <li>List1</li> </ul>')
 })
 
 //ROUTES
