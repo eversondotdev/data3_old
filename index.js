@@ -6,9 +6,7 @@ const port = process.env.PORT || 5000
 //CORS SETTINGS
 app.use(
     cors({
-        origin: '*',
-        methods: ['GET'],
-        credentials: true
+        origin: '*'
     })
 )
 
