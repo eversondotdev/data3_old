@@ -1,14 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+const port = process.env.PORT || 5000
 
 //CORS SETTINGS
 app.use(
@@ -19,7 +12,7 @@ app.use(
     })
 )
 
-app.use(express.json())
+app.use(express.json()) // allows to access the req.body
 
 //INDEX
 app.get('/', (req, res, next) => {
@@ -50,9 +43,6 @@ app.use('/stock_price', stock_price)
 
 const annual_stock_price = require('./routes/annual_stock_price')
 app.use('/annual_stock_price', annual_stock_price)
-
-//LISTEN
-const port = process.env.PORT || 5000
 
 app.listen(port, () => {
     console.log(`server running on ${port}`)
