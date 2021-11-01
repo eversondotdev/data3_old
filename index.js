@@ -33,6 +33,9 @@ app.use('/revenue_by_segment_2019', revenue_by_segment_2019Routes)
 const revenue_by_segment_2018Routes = require('./routes/revenue_by_segment_2018')
 app.use('/revenue_by_segment_2018', revenue_by_segment_2018Routes)
 
+const revenue_by_regionRoutes = require('./routes/revenue_by_region')
+app.use('/revenue_by_region', revenue_by_regionRoutes)
+
 const annual_report = require('./routes/annual_report')
 app.use('/annual_report', annual_report)
 
