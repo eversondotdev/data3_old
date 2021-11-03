@@ -2,7 +2,8 @@ DROP TABLE revenue_by_segment
 
 SELECT *
 FROM revenue_by_segment
-WHERE year = 2020 AND ticker_id = 'AAPL'
+WHERE year = 2020 AND ticker_id = 'KO'
+ORDER BY segment
 
 CREATE TABLE revenue_by_segment(
 	ticker_id VARCHAR(10) NOT NULL,
